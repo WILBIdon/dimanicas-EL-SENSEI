@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
@@ -19,7 +22,7 @@
                             dark: '#0F2C59',     // Azul Real Profundo
                             primary: '#163E75',  // Azul medio
                             accent: '#F2C94C',   // Dorado Brillante
-                            whatsapp: '#25D366', 
+                            whatsapp: '#25D366',
                             whatsappDark: '#128C7E',
                             light: '#F8FAFC',
                         }
@@ -40,36 +43,41 @@
             background-position: center;
             background-attachment: fixed;
         }
-        
+
         .steps-bg {
-             /* Imagen: Monedas, Oro y Fortuna. */
-             background-image: linear-gradient(rgba(15, 44, 89, 0.95), rgba(15, 44, 89, 0.85)), url('https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-             background-size: cover;
-             background-position: center;
+            /* Imagen: Monedas, Oro y Fortuna. */
+            background-image: linear-gradient(rgba(15, 44, 89, 0.95), rgba(15, 44, 89, 0.85)), url('https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
         }
 
         .smooth-scroll {
             scroll-behavior: smooth;
         }
+
         .fade-in-up {
             animation: fadeInUp 1s ease-out forwards;
             opacity: 0;
             transform: translateY(20px);
         }
+
         @keyframes fadeInUp {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         .modal {
             transition: opacity 0.3s ease, visibility 0.3s ease;
         }
+
         .modal.hidden-modal {
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
         }
+
         .modal.visible-modal {
             opacity: 1;
             visibility: visible;
@@ -77,45 +85,65 @@
         }
     </style>
 </head>
+
 <body class="font-sans text-gray-600 bg-brand-light smooth-scroll antialiased flex flex-col min-h-screen">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-brand-dark/95 backdrop-blur-md shadow-lg transition-all duration-300 border-b border-brand-accent/20" id="navbar">
+    <nav class="fixed w-full z-50 bg-brand-dark/95 backdrop-blur-md shadow-lg transition-all duration-300 border-b border-brand-accent/20"
+        id="navbar">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo Section -->
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <img src="Gemini_Generated_Image_k5araik5araik5ar.jpg" alt="Logo Dinámicas El Sensei" class="h-12 w-auto object-contain rounded-md border border-brand-accent/30 shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/60x60/0F2C59/F2C94C?text=DS';">
-                    <span class="font-serif text-xl md:text-2xl font-bold text-white tracking-tight">Dinámicas <span class="text-brand-accent">El Sensei</span></span>
+                    <img src="Gemini_Generated_Image_k5araik5araik5ar.jpg" alt="Logo Dinámicas El Sensei"
+                        class="h-12 w-auto object-contain rounded-md border border-brand-accent/30 shadow-md"
+                        onerror="this.onerror=null; this.src='https://placehold.co/60x60/0F2C59/F2C94C?text=DS';">
+                    <span
+                        class="font-serif text-lg md:text-xl lg:text-2xl font-bold text-white tracking-tight">Dinámicas
+                        <span class="text-brand-accent">El Sensei</span></span>
                 </div>
-                
+
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#inicio" class="text-sm font-medium text-blue-100 hover:text-brand-accent transition-colors tracking-wide">INICIO</a>
-                    <a href="#video-promo" class="text-sm font-medium text-blue-100 hover:text-brand-accent transition-colors tracking-wide">VIDEO</a>
-                    <a href="#ventajas" class="text-sm font-medium text-blue-100 hover:text-brand-accent transition-colors tracking-wide">VENTAJAS</a>
-                    <a href="#como-funciona" class="text-sm font-medium text-blue-100 hover:text-brand-accent transition-colors tracking-wide">¿CÓMO FUNCIONA?</a>
-                    <a href="https://chat.whatsapp.com/" target="_blank" class="bg-brand-whatsapp text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-brand-whatsappDark transition-all shadow-[0_0_15px_rgba(37,211,102,0.3)] hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transform hover:-translate-y-0.5 flex items-center gap-2">
-                        <i class="fab fa-whatsapp text-lg"></i> UNIRSE AL GRUPO
+                    <a href="#inicio"
+                        class="text-sm font-medium text-blue-100 hover:text-brand-accent transition-colors tracking-wide">INICIO</a>
+                    <a href="#video-promo"
+                        class="text-sm font-medium text-blue-100 hover:text-brand-accent transition-colors tracking-wide">VIDEO</a>
+                    <a href="#ventajas"
+                        class="text-sm font-medium text-blue-100 hover:text-brand-accent transition-colors tracking-wide">VENTAJAS</a>
+                    <a href="#como-funciona"
+                        class="text-sm font-medium text-blue-100 hover:text-brand-accent transition-colors tracking-wide">¿CÓMO
+                        FUNCIONA?</a>
+                    <a href="https://chat.whatsapp.com/" target="_blank"
+                        class="bg-brand-whatsapp text-white px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-bold hover:bg-brand-whatsappDark transition-all shadow-[0_0_15px_rgba(37,211,102,0.3)] hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-base md:text-lg"></i> <span class="hidden sm:inline">UNIRSE
+                            AL</span> GRUPO
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-white hover:text-brand-accent focus:outline-none transition-colors">
+                    <button id="mobile-menu-btn"
+                        class="text-white hover:text-brand-accent focus:outline-none transition-colors">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-brand-primary absolute w-full shadow-xl">
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-brand-dark border-t border-brand-primary absolute w-full shadow-xl">
             <div class="px-4 pt-2 pb-6 space-y-1">
-                <a href="#inicio" class="block px-3 py-3 text-base font-medium text-blue-50 hover:bg-brand-primary hover:text-brand-accent rounded-md">Inicio</a>
-                <a href="#ventajas" class="block px-3 py-3 text-base font-medium text-blue-50 hover:bg-brand-primary hover:text-brand-accent rounded-md">Ventajas</a>
-                <a href="#como-funciona" class="block px-3 py-3 text-base font-medium text-blue-50 hover:bg-brand-primary hover:text-brand-accent rounded-md">¿Cómo funciona?</a>
-                <a href="https://chat.whatsapp.com/" class="block px-3 py-3 text-base font-bold text-brand-whatsapp hover:bg-brand-primary rounded-md">
+                <a href="#inicio"
+                    class="block px-3 py-3 text-base font-medium text-blue-50 hover:bg-brand-primary hover:text-brand-accent rounded-md">Inicio</a>
+                <a href="#ventajas"
+                    class="block px-3 py-3 text-base font-medium text-blue-50 hover:bg-brand-primary hover:text-brand-accent rounded-md">Ventajas</a>
+                <a href="#como-funciona"
+                    class="block px-3 py-3 text-base font-medium text-blue-50 hover:bg-brand-primary hover:text-brand-accent rounded-md">¿Cómo
+                    funciona?</a>
+                <a href="https://chat.whatsapp.com/"
+                    class="block px-3 py-3 text-base font-bold text-brand-whatsapp hover:bg-brand-primary rounded-md">
                     <i class="fab fa-whatsapp mr-2"></i> Unirse al Grupo
                 </a>
             </div>
@@ -125,23 +153,32 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center relative pt-20">
         <div class="relative max-w-7xl mx-auto px-6 text-center text-white z-10">
-            <h2 class="text-sm md:text-base font-bold tracking-[0.3em] uppercase mb-4 text-brand-accent fade-in-up" style="animation-delay: 0.1s;">Participá, Ganá y Celebrá</h2>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 leading-tight fade-in-up drop-shadow-xl" style="animation-delay: 0.3s;">
-                Premios Reales<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-yellow-100 to-brand-accent">Todos los Días</span>
+            <h2 class="text-xs md:text-base font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-3 md:mb-4 text-brand-accent fade-in-up"
+                style="animation-delay: 0.1s;">Participá, Ganá y Celebrá</h2>
+            <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 md:mb-6 leading-tight fade-in-up drop-shadow-xl"
+                style="animation-delay: 0.3s;">
+                Premios Reales<br><span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-yellow-100 to-brand-accent">Todos
+                    los Días</span>
             </h1>
-            <p class="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto font-light fade-in-up" style="animation-delay: 0.5s;">
-                Únete a nuestra comunidad exclusiva. Tecnología, efectivo y experiencias de lujo a solo un clic de distancia.
+            <p class="text-base md:text-lg lg:text-xl text-blue-100 mb-8 md:mb-10 max-w-2xl mx-auto font-light fade-in-up px-4 md:px-0"
+                style="animation-delay: 0.5s;">
+                Únete a nuestra comunidad exclusiva. Tecnología, efectivo y experiencias de lujo a solo un clic de
+                distancia.
             </p>
-            <div class="flex flex-col sm:flex-row gap-5 justify-center fade-in-up" style="animation-delay: 0.7s;">
-                <a href="https://chat.whatsapp.com/" target="_blank" class="px-8 py-4 bg-brand-whatsapp text-white font-bold rounded-lg hover:bg-brand-whatsappDark transition-colors duration-300 shadow-xl flex items-center justify-center gap-2 border border-transparent hover:border-white/30 transform hover:scale-105">
-                    <i class="fab fa-whatsapp text-xl"></i> UNIRSE AHORA
+            <div class="flex flex-col sm:flex-row gap-3 md:gap-5 justify-center fade-in-up px-4 md:px-0"
+                style="animation-delay: 0.7s;">
+                <a href="https://chat.whatsapp.com/" target="_blank"
+                    class="px-6 md:px-8 py-3 md:py-4 bg-brand-whatsapp text-white text-sm md:text-base font-bold rounded-lg hover:bg-brand-whatsappDark transition-colors duration-300 shadow-xl flex items-center justify-center gap-2 border border-transparent hover:border-white/30 transform hover:scale-105">
+                    <i class="fab fa-whatsapp text-lg md:text-xl"></i> UNIRSE AHORA
                 </a>
-                <a href="#como-funciona" class="px-8 py-4 border border-brand-accent text-brand-accent font-semibold rounded-lg hover:bg-brand-accent hover:text-brand-dark transition-colors duration-300">
+                <a href="#como-funciona"
+                    class="px-6 md:px-8 py-3 md:py-4 border border-brand-accent text-brand-accent text-sm md:text-base font-semibold rounded-lg hover:bg-brand-accent hover:text-brand-dark transition-colors duration-300">
                     Ver Dinámica
                 </a>
             </div>
         </div>
-        
+
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
             <a href="#video-promo" class="text-brand-accent opacity-80 hover:opacity-100 transition-opacity">
                 <i class="fas fa-chevron-down text-2xl"></i>
@@ -161,9 +198,11 @@
                 <!-- Placeholder de Video (Reemplaza el src del iframe con tu video de YouTube/Vimeo) -->
                 <!-- Ejemplo con imagen de fondo simulando video si no hay iframe cargado -->
                 <div class="absolute inset-0 bg-black flex items-center justify-center group cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Video Cover" class="w-full h-full object-cover opacity-60">
+                    <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                        alt="Video Cover" class="w-full h-full object-cover opacity-60">
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-20 h-20 bg-brand-accent rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+                        <div
+                            class="w-20 h-20 bg-brand-accent rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
                             <i class="fas fa-play text-brand-dark text-3xl ml-1"></i>
                         </div>
                     </div>
@@ -177,56 +216,74 @@
     <!-- Advantages Section (Actualizado con Imágenes) -->
     <section id="ventajas" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-brand-dark font-bold text-sm tracking-wider uppercase border-b-2 border-brand-accent pb-1">¿Por qué participar?</span>
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-dark mt-6">La Suerte está de tu Lado</h2>
+            <div class="text-center mb-12 md:mb-16 px-4">
+                <span
+                    class="text-brand-dark font-bold text-xs md:text-sm tracking-wider uppercase border-b-2 border-brand-accent pb-1">¿Por
+                    qué participar?</span>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-brand-dark mt-4 md:mt-6">La Suerte
+                    está de tu Lado</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <!-- Advantage 1: Premios -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                <div
+                    class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
                     <div class="h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1599602447957-c88f11d61994?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Premios en Efectivo" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1599602447957-c88f11d61994?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Premios en Efectivo"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-8 text-center relative">
-                        <div class="w-14 h-14 bg-brand-dark text-brand-accent rounded-full flex items-center justify-center absolute -top-7 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-md">
+                        <div
+                            class="w-14 h-14 bg-brand-dark text-brand-accent rounded-full flex items-center justify-center absolute -top-7 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-md">
                             <i class="fas fa-gift text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-brand-dark mt-6 mb-3">Premios en Efectivo</h3>
                         <p class="text-gray-600 leading-relaxed text-sm">
-                            Gana dinero real, transferencias directas y tecnología de alta gama. Lo que siempre has querido, ahora a tu alcance.
+                            Gana dinero real, transferencias directas y tecnología de alta gama. Lo que siempre has
+                            querido, ahora a tu alcance.
                         </p>
                     </div>
                 </div>
 
                 <!-- Advantage 2: Fácil -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                <div
+                    class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
                     <div class="h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fácil con WhatsApp" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Fácil con WhatsApp"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-8 text-center relative">
-                        <div class="w-14 h-14 bg-brand-whatsapp text-white rounded-full flex items-center justify-center absolute -top-7 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-md">
+                        <div
+                            class="w-14 h-14 bg-brand-whatsapp text-white rounded-full flex items-center justify-center absolute -top-7 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-md">
                             <i class="fab fa-whatsapp text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-brand-dark mt-6 mb-3">Fácil Participación</h3>
                         <p class="text-gray-600 leading-relaxed text-sm">
-                            Olvídate de registros complejos. Todo sucede en tu app favorita: WhatsApp. Rápido, directo y sin complicaciones.
+                            Olvídate de registros complejos. Todo sucede en tu app favorita: WhatsApp. Rápido, directo y
+                            sin complicaciones.
                         </p>
                     </div>
                 </div>
 
                 <!-- Advantage 3: Seguro -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                <div
+                    class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
                     <div class="h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="100% Seguro" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="100% Seguro"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-8 text-center relative">
-                        <div class="w-14 h-14 bg-brand-dark text-brand-accent rounded-full flex items-center justify-center absolute -top-7 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-md">
+                        <div
+                            class="w-14 h-14 bg-brand-dark text-brand-accent rounded-full flex items-center justify-center absolute -top-7 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-md">
                             <i class="fas fa-shield-alt text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-brand-dark mt-6 mb-3">100% Seguro</h3>
                         <p class="text-gray-600 leading-relaxed text-sm">
-                            Tu tranquilidad es primero. Sorteos transparentes, datos protegidos y resultados verificables en vivo.
+                            Tu tranquilidad es primero. Sorteos transparentes, datos protegidos y resultados
+                            verificables en vivo.
                         </p>
                     </div>
                 </div>
@@ -238,40 +295,56 @@
     <section id="como-funciona" class="py-24 steps-bg relative text-white">
         <!-- Overlay sutil para legibilidad usando el azul de la marca -->
         <div class="absolute inset-0 bg-brand-dark/70"></div>
-        
+
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <span class="text-brand-accent font-bold text-sm tracking-wider uppercase">Paso a Paso</span>
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mt-2">¿Cómo Funciona?</h2>
+            <div class="text-center mb-12 md:mb-16 px-4">
+                <span class="text-brand-accent font-bold text-xs md:text-sm tracking-wider uppercase">Paso a Paso</span>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-white mt-2">¿Cómo Funciona?</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Step 1 -->
-                <div class="bg-brand-dark/80 backdrop-blur-md p-8 rounded-xl border border-white/10 hover:border-brand-accent transition-all duration-300 relative group hover:bg-brand-dark/90">
-                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-brand-accent text-brand-dark w-10 h-10 rounded-full flex items-center justify-center font-bold font-serif text-lg shadow-lg group-hover:bg-white group-hover:text-brand-dark transition-colors border-2 border-brand-dark">1</div>
+                <div
+                    class="bg-brand-dark/80 backdrop-blur-md p-8 rounded-xl border border-white/10 hover:border-brand-accent transition-all duration-300 relative group hover:bg-brand-dark/90">
+                    <div
+                        class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-brand-accent text-brand-dark w-10 h-10 rounded-full flex items-center justify-center font-bold font-serif text-lg shadow-lg group-hover:bg-white group-hover:text-brand-dark transition-colors border-2 border-brand-dark">
+                        1</div>
                     <h4 class="text-lg font-bold text-center mt-4 mb-2 text-white">Únete al Grupo</h4>
-                    <p class="text-sm text-center text-gray-300">Ingresa a nuestro grupo exclusivo de WhatsApp donde anunciamos todo.</p>
+                    <p class="text-sm text-center text-gray-300">Ingresa a nuestro grupo exclusivo de WhatsApp donde
+                        anunciamos todo.</p>
                 </div>
 
                 <!-- Step 2 -->
-                <div class="bg-brand-dark/80 backdrop-blur-md p-8 rounded-xl border border-white/10 hover:border-brand-accent transition-all duration-300 relative group hover:bg-brand-dark/90">
-                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-brand-accent text-brand-dark w-10 h-10 rounded-full flex items-center justify-center font-bold font-serif text-lg shadow-lg group-hover:bg-white group-hover:text-brand-dark transition-colors border-2 border-brand-dark">2</div>
+                <div
+                    class="bg-brand-dark/80 backdrop-blur-md p-8 rounded-xl border border-white/10 hover:border-brand-accent transition-all duration-300 relative group hover:bg-brand-dark/90">
+                    <div
+                        class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-brand-accent text-brand-dark w-10 h-10 rounded-full flex items-center justify-center font-bold font-serif text-lg shadow-lg group-hover:bg-white group-hover:text-brand-dark transition-colors border-2 border-brand-dark">
+                        2</div>
                     <h4 class="text-lg font-bold text-center mt-4 mb-2 text-white">Conoce la Dinámica</h4>
-                    <p class="text-sm text-center text-gray-300">Todos los días se explica una dinámica diferente y las opciones para ganar.</p>
+                    <p class="text-sm text-center text-gray-300">Todos los días se explica una dinámica diferente y las
+                        opciones para ganar.</p>
                 </div>
 
                 <!-- Step 3 -->
-                <div class="bg-brand-dark/80 backdrop-blur-md p-8 rounded-xl border border-white/10 hover:border-brand-accent transition-all duration-300 relative group hover:bg-brand-dark/90">
-                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-brand-accent text-brand-dark w-10 h-10 rounded-full flex items-center justify-center font-bold font-serif text-lg shadow-lg group-hover:bg-white group-hover:text-brand-dark transition-colors border-2 border-brand-dark">3</div>
+                <div
+                    class="bg-brand-dark/80 backdrop-blur-md p-8 rounded-xl border border-white/10 hover:border-brand-accent transition-all duration-300 relative group hover:bg-brand-dark/90">
+                    <div
+                        class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-brand-accent text-brand-dark w-10 h-10 rounded-full flex items-center justify-center font-bold font-serif text-lg shadow-lg group-hover:bg-white group-hover:text-brand-dark transition-colors border-2 border-brand-dark">
+                        3</div>
                     <h4 class="text-lg font-bold text-center mt-4 mb-2 text-white">Participa</h4>
-                    <p class="text-sm text-center text-gray-300">Sigue las instrucciones específicas de cada dinámica diaria o semanal.</p>
+                    <p class="text-sm text-center text-gray-300">Sigue las instrucciones específicas de cada dinámica
+                        diaria o semanal.</p>
                 </div>
 
                 <!-- Step 4 -->
-                <div class="bg-brand-dark/80 backdrop-blur-md p-8 rounded-xl border border-white/10 hover:border-brand-accent transition-all duration-300 relative group hover:bg-brand-dark/90">
-                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-brand-accent text-brand-dark w-10 h-10 rounded-full flex items-center justify-center font-bold font-serif text-lg shadow-lg group-hover:bg-white group-hover:text-brand-dark transition-colors border-2 border-brand-dark">4</div>
+                <div
+                    class="bg-brand-dark/80 backdrop-blur-md p-8 rounded-xl border border-white/10 hover:border-brand-accent transition-all duration-300 relative group hover:bg-brand-dark/90">
+                    <div
+                        class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-brand-accent text-brand-dark w-10 h-10 rounded-full flex items-center justify-center font-bold font-serif text-lg shadow-lg group-hover:bg-white group-hover:text-brand-dark transition-colors border-2 border-brand-dark">
+                        4</div>
                     <h4 class="text-lg font-bold text-center mt-4 mb-2 text-white">Gana</h4>
-                    <p class="text-sm text-center text-gray-300">Espera el anuncio del ganador en vivo. ¡Podrías ser tú!</p>
+                    <p class="text-sm text-center text-gray-300">Espera el anuncio del ganador en vivo. ¡Podrías ser tú!
+                    </p>
                 </div>
             </div>
         </div>
@@ -280,15 +353,21 @@
     <!-- Call to Action Banner -->
     <section class="py-20 bg-brand-dark relative overflow-hidden">
         <!-- Decoración de fondo -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-accent opacity-10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-primary opacity-30 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
-        
+        <div
+            class="absolute top-0 right-0 w-96 h-96 bg-brand-accent opacity-10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-64 h-64 bg-brand-primary opacity-30 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2">
+        </div>
+
         <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-6">Cada cupo es una nueva oportunidad</h2>
-            <p class="text-lg text-gray-300 mb-8 font-light">
+            <h2 class="text-2xl md:text-3xl lg:text-5xl font-serif font-bold text-white mb-4 md:mb-6 px-4">Cada cupo es
+                una nueva oportunidad</h2>
+            <p class="text-base md:text-lg text-gray-300 mb-6 md:mb-8 font-light px-4">
                 No te quedes fuera del próximo sorteo. La comunidad está creciendo y los premios son limitados.
             </p>
-            <a href="https://chat.whatsapp.com/" target="_blank" class="inline-flex items-center gap-3 bg-brand-whatsapp hover:bg-white hover:text-brand-whatsapp text-white font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(37,211,102,0.4)] text-lg">
+            <a href="https://chat.whatsapp.com/" target="_blank"
+                class="inline-flex items-center gap-3 bg-brand-whatsapp hover:bg-white hover:text-brand-whatsapp text-white font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(37,211,102,0.4)] text-lg">
                 <i class="fab fa-whatsapp"></i> UNIRME AL GRUPO AHORA
             </a>
         </div>
@@ -305,34 +384,46 @@
             <div class="space-y-4">
                 <!-- FAQ Item 1 -->
                 <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button class="w-full px-6 py-4 text-left bg-brand-light hover:bg-gray-50 flex justify-between items-center font-semibold text-brand-dark focus:outline-none" onclick="toggleFaq('faq1')">
+                    <button
+                        class="w-full px-6 py-4 text-left bg-brand-light hover:bg-gray-50 flex justify-between items-center font-semibold text-brand-dark focus:outline-none"
+                        onclick="toggleFaq('faq1')">
                         <span>¿Los sorteos son en vivo?</span>
-                        <i class="fas fa-chevron-down text-brand-accent transition-transform duration-300" id="icon-faq1"></i>
+                        <i class="fas fa-chevron-down text-brand-accent transition-transform duration-300"
+                            id="icon-faq1"></i>
                     </button>
                     <div id="faq1" class="hidden px-6 py-4 text-gray-600 bg-white border-t border-gray-100">
-                        Sí, todos nuestros sorteos se realizan de manera transparente y en vivo, utilizando herramientas aleatorias certificadas para seleccionar a los ganadores.
+                        Sí, todos nuestros sorteos se realizan de manera transparente y en vivo, utilizando herramientas
+                        aleatorias certificadas para seleccionar a los ganadores.
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
                 <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button class="w-full px-6 py-4 text-left bg-brand-light hover:bg-gray-50 flex justify-between items-center font-semibold text-brand-dark focus:outline-none" onclick="toggleFaq('faq2')">
+                    <button
+                        class="w-full px-6 py-4 text-left bg-brand-light hover:bg-gray-50 flex justify-between items-center font-semibold text-brand-dark focus:outline-none"
+                        onclick="toggleFaq('faq2')">
                         <span>¿Qué necesito para participar?</span>
-                        <i class="fas fa-chevron-down text-brand-accent transition-transform duration-300" id="icon-faq2"></i>
+                        <i class="fas fa-chevron-down text-brand-accent transition-transform duration-300"
+                            id="icon-faq2"></i>
                     </button>
                     <div id="faq2" class="hidden px-6 py-4 text-gray-600 bg-white border-t border-gray-100">
-                        Únicamente necesitas un teléfono móvil con una cuenta de WhatsApp activa y ser mayor de edad (o tener consentimiento legal).
+                        Únicamente necesitas un teléfono móvil con una cuenta de WhatsApp activa y ser mayor de edad (o
+                        tener consentimiento legal).
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
                 <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button class="w-full px-6 py-4 text-left bg-brand-light hover:bg-gray-50 flex justify-between items-center font-semibold text-brand-dark focus:outline-none" onclick="toggleFaq('faq3')">
+                    <button
+                        class="w-full px-6 py-4 text-left bg-brand-light hover:bg-gray-50 flex justify-between items-center font-semibold text-brand-dark focus:outline-none"
+                        onclick="toggleFaq('faq3')">
                         <span>¿Tiene algún costo participar?</span>
-                        <i class="fas fa-chevron-down text-brand-accent transition-transform duration-300" id="icon-faq3"></i>
+                        <i class="fas fa-chevron-down text-brand-accent transition-transform duration-300"
+                            id="icon-faq3"></i>
                     </button>
                     <div id="faq3" class="hidden px-6 py-4 text-gray-600 bg-white border-t border-gray-100">
-                        La mayoría de nuestras dinámicas son gratuitas para los miembros del grupo. En caso de sorteos especiales con cuota, se informará claramente en el grupo.
+                        La mayoría de nuestras dinámicas son gratuitas para los miembros del grupo. En caso de sorteos
+                        especiales con cuota, se informará claramente en el grupo.
                     </div>
                 </div>
             </div>
@@ -345,35 +436,53 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 border-b border-brand-primary pb-12">
                 <div>
                     <div class="flex items-center gap-2 mb-4">
-                        <img src="Gemini_Generated_Image_k5araik5araik5ar.jpg" alt="Logo Footer" class="h-8 w-auto opacity-90" onerror="this.onerror=null; this.src='https://placehold.co/40x40/0F2C59/F2C94C?text=D';">
-                        <span class="font-serif text-xl font-bold text-white">Dinámicas <span class="text-brand-accent">El Sensei</span></span>
+                        <img src="Gemini_Generated_Image_k5araik5araik5ar.jpg" alt="Logo Footer"
+                            class="h-8 w-auto opacity-90"
+                            onerror="this.onerror=null; this.src='https://placehold.co/40x40/0F2C59/F2C94C?text=D';">
+                        <span class="font-serif text-xl font-bold text-white">Dinámicas <span
+                                class="text-brand-accent">El Sensei</span></span>
                     </div>
                     <p class="text-blue-100 text-sm leading-relaxed mb-6">
-                        La plataforma líder en sorteos digitales confiables. Tu seguridad y diversión son nuestro compromiso.
+                        La plataforma líder en sorteos digitales confiables. Tu seguridad y diversión son nuestro
+                        compromiso.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-brand-primary flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-brand-primary flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-brand-primary flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-brand-primary flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-brand-primary flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-brand-primary flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"><i
+                                class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
-                
+
                 <div>
                     <h5 class="text-brand-accent font-bold mb-4 uppercase text-sm tracking-wider">Legal</h5>
                     <ul class="space-y-3 text-sm text-blue-100">
-                        <li><button onclick="openModal('modal-terms')" class="hover:text-brand-accent transition-colors text-left">Términos y Condiciones</button></li>
-                        <li><button onclick="openModal('modal-privacy')" class="hover:text-brand-accent transition-colors text-left">Política de Privacidad</button></li>
-                        <li><button onclick="openModal('modal-data')" class="hover:text-brand-accent transition-colors text-left">Tratamiento de Datos</button></li>
+                        <li><button onclick="openModal('modal-terms')"
+                                class="hover:text-brand-accent transition-colors text-left">Términos y
+                                Condiciones</button></li>
+                        <li><button onclick="openModal('modal-privacy')"
+                                class="hover:text-brand-accent transition-colors text-left">Política de
+                                Privacidad</button></li>
+                        <li><button onclick="openModal('modal-data')"
+                                class="hover:text-brand-accent transition-colors text-left">Tratamiento de
+                                Datos</button></li>
                     </ul>
                 </div>
 
                 <div>
                     <h5 class="text-brand-accent font-bold mb-4 uppercase text-sm tracking-wider">Contacto</h5>
-                    <p class="text-blue-100 text-sm mb-2"><i class="fas fa-envelope mr-2 text-brand-accent"></i> soporte@dinamicaslyd.com</p>
-                    <p class="text-blue-100 text-sm"><i class="fas fa-map-marker-alt mr-2 text-brand-accent"></i> Operación Global</p>
+                    <p class="text-blue-100 text-sm mb-2"><i class="fas fa-envelope mr-2 text-brand-accent"></i>
+                        soporte@dinamicaslyd.com</p>
+                    <p class="text-blue-100 text-sm"><i class="fas fa-map-marker-alt mr-2 text-brand-accent"></i>
+                        Operación Global</p>
                 </div>
             </div>
-            
+
             <div class="text-center text-xs text-blue-200">
                 <p>&copy; 2025 Dinámicas El Sensei. Todos los derechos reservados.</p>
             </div>
@@ -381,70 +490,100 @@
     </footer>
 
     <!-- MODALES LEGALES (Sin cambios de contenido, solo de estilo) -->
-    
+
     <!-- Modal Términos y Condiciones -->
-    <div id="modal-terms" class="fixed inset-0 z-[60] flex items-center justify-center bg-brand-dark/90 backdrop-blur-sm hidden-modal modal p-4">
-        <div class="bg-white rounded-lg w-full max-w-2xl max-h-[80vh] overflow-y-auto shadow-2xl border-t-4 border-brand-accent">
+    <div id="modal-terms"
+        class="fixed inset-0 z-[60] flex items-center justify-center bg-brand-dark/90 backdrop-blur-sm hidden-modal modal p-4">
+        <div
+            class="bg-white rounded-lg w-full max-w-2xl max-h-[80vh] overflow-y-auto shadow-2xl border-t-4 border-brand-accent">
             <div class="sticky top-0 bg-white border-b border-gray-100 p-6 flex justify-between items-center">
                 <h3 class="text-xl font-bold text-brand-dark">Términos y Condiciones</h3>
-                <button onclick="closeModal('modal-terms')" class="text-gray-400 hover:text-brand-dark text-2xl"><i class="fas fa-times"></i></button>
+                <button onclick="closeModal('modal-terms')" class="text-gray-400 hover:text-brand-dark text-2xl"><i
+                        class="fas fa-times"></i></button>
             </div>
             <div class="p-6 text-sm text-gray-600 space-y-4">
-                <p><strong>1. Elegibilidad:</strong> Se debe ser mayor de 18 años o contar con consentimiento de un tutor legal, residir en un país donde los sorteos sean legales y tener cuenta de WhatsApp.</p>
-                <p><strong>2. Participación:</strong> Los sorteos pueden ser gratuitos o requerir una cuota. Los detalles (premio, fecha y reglas específicas) se comunican en el grupo de WhatsApp.</p>
-                <p><strong>3. Premios:</strong> No son transferibles ni canjeables por dinero salvo indicación contraria; los ganadores asumen los impuestos o costes asociados.</p>
-                <p><strong>4. Selección de ganadores:</strong> Se realiza de manera aleatoria y transparente. El organizador puede descalificar participantes que no cumplan las reglas.</p>
-                <p><strong>5. Obligaciones:</strong> Proporcionar información veraz, seguir las reglas y no dañar la reputación de la organización.</p>
-                <p><strong>6. Responsabilidad:</strong> No nos responsabilizamos por errores técnicos, pérdida o daño de premios ni daños indirectos.</p>
-                <p><strong>7. Modificaciones:</strong> Nos reservamos el derecho de modificar o cancelar sorteos, notificándolo en el grupo.</p>
+                <p><strong>1. Elegibilidad:</strong> Se debe ser mayor de 18 años o contar con consentimiento de un
+                    tutor legal, residir en un país donde los sorteos sean legales y tener cuenta de WhatsApp.</p>
+                <p><strong>2. Participación:</strong> Los sorteos pueden ser gratuitos o requerir una cuota. Los
+                    detalles (premio, fecha y reglas específicas) se comunican en el grupo de WhatsApp.</p>
+                <p><strong>3. Premios:</strong> No son transferibles ni canjeables por dinero salvo indicación
+                    contraria; los ganadores asumen los impuestos o costes asociados.</p>
+                <p><strong>4. Selección de ganadores:</strong> Se realiza de manera aleatoria y transparente. El
+                    organizador puede descalificar participantes que no cumplan las reglas.</p>
+                <p><strong>5. Obligaciones:</strong> Proporcionar información veraz, seguir las reglas y no dañar la
+                    reputación de la organización.</p>
+                <p><strong>6. Responsabilidad:</strong> No nos responsabilizamos por errores técnicos, pérdida o daño de
+                    premios ni daños indirectos.</p>
+                <p><strong>7. Modificaciones:</strong> Nos reservamos el derecho de modificar o cancelar sorteos,
+                    notificándolo en el grupo.</p>
                 <p><strong>8. Ley aplicable:</strong> Estos términos se rigen por las leyes locales aplicables.</p>
             </div>
             <div class="p-6 border-t border-gray-100 text-right">
-                <button onclick="closeModal('modal-terms')" class="bg-brand-dark text-white px-6 py-2 rounded hover:bg-brand-primary font-medium transition-colors">Entendido</button>
+                <button onclick="closeModal('modal-terms')"
+                    class="bg-brand-dark text-white px-6 py-2 rounded hover:bg-brand-primary font-medium transition-colors">Entendido</button>
             </div>
         </div>
     </div>
 
     <!-- Modal Política de Privacidad -->
-    <div id="modal-privacy" class="fixed inset-0 z-[60] flex items-center justify-center bg-brand-dark/90 backdrop-blur-sm hidden-modal modal p-4">
-        <div class="bg-white rounded-lg w-full max-w-2xl max-h-[80vh] overflow-y-auto shadow-2xl border-t-4 border-brand-accent">
+    <div id="modal-privacy"
+        class="fixed inset-0 z-[60] flex items-center justify-center bg-brand-dark/90 backdrop-blur-sm hidden-modal modal p-4">
+        <div
+            class="bg-white rounded-lg w-full max-w-2xl max-h-[80vh] overflow-y-auto shadow-2xl border-t-4 border-brand-accent">
             <div class="sticky top-0 bg-white border-b border-gray-100 p-6 flex justify-between items-center">
                 <h3 class="text-xl font-bold text-brand-dark">Política de Privacidad</h3>
-                <button onclick="closeModal('modal-privacy')" class="text-gray-400 hover:text-brand-dark text-2xl"><i class="fas fa-times"></i></button>
+                <button onclick="closeModal('modal-privacy')" class="text-gray-400 hover:text-brand-dark text-2xl"><i
+                        class="fas fa-times"></i></button>
             </div>
             <div class="p-6 text-sm text-gray-600 space-y-4">
-                <p><strong>Datos recopilados:</strong> Nombre completo, número de WhatsApp, correo electrónico (si aplica), información en formularios y datos de navegación (IP, navegador).</p>
-                <p><strong>Uso de la información:</strong> Gestionar la participación, comunicarse con el usuario, mejorar el sitio web, cumplir obligaciones legales y enviar promociones (con consentimiento).</p>
-                <p><strong>Compartición:</strong> No vendemos ni alquilamos datos. Solo se comparten con proveedores necesarios para operar los sorteos y autoridades legales si es requerido.</p>
-                <p><strong>Seguridad:</strong> Utilizamos medidas técnicas para proteger la información, aunque ninguna transmisión web es 100% segura.</p>
-                <p><strong>Derechos:</strong> Tienes derecho a acceder, corregir, eliminar tus datos o retirar el consentimiento escribiendo a soporte@dinamicaslyd.com.</p>
-                <p><strong>Cookies:</strong> Utilizamos cookies para mejorar la experiencia; pueden desactivarse en tu navegador.</p>
+                <p><strong>Datos recopilados:</strong> Nombre completo, número de WhatsApp, correo electrónico (si
+                    aplica), información en formularios y datos de navegación (IP, navegador).</p>
+                <p><strong>Uso de la información:</strong> Gestionar la participación, comunicarse con el usuario,
+                    mejorar el sitio web, cumplir obligaciones legales y enviar promociones (con consentimiento).</p>
+                <p><strong>Compartición:</strong> No vendemos ni alquilamos datos. Solo se comparten con proveedores
+                    necesarios para operar los sorteos y autoridades legales si es requerido.</p>
+                <p><strong>Seguridad:</strong> Utilizamos medidas técnicas para proteger la información, aunque ninguna
+                    transmisión web es 100% segura.</p>
+                <p><strong>Derechos:</strong> Tienes derecho a acceder, corregir, eliminar tus datos o retirar el
+                    consentimiento escribiendo a soporte@dinamicaslyd.com.</p>
+                <p><strong>Cookies:</strong> Utilizamos cookies para mejorar la experiencia; pueden desactivarse en tu
+                    navegador.</p>
                 <p><em>Última actualización: 5 de mayo de 2025.</em></p>
             </div>
-             <div class="p-6 border-t border-gray-100 text-right">
-                <button onclick="closeModal('modal-privacy')" class="bg-brand-dark text-white px-6 py-2 rounded hover:bg-brand-primary font-medium transition-colors">Entendido</button>
+            <div class="p-6 border-t border-gray-100 text-right">
+                <button onclick="closeModal('modal-privacy')"
+                    class="bg-brand-dark text-white px-6 py-2 rounded hover:bg-brand-primary font-medium transition-colors">Entendido</button>
             </div>
         </div>
     </div>
 
     <!-- Modal Tratamiento de Datos -->
-    <div id="modal-data" class="fixed inset-0 z-[60] flex items-center justify-center bg-brand-dark/90 backdrop-blur-sm hidden-modal modal p-4">
-        <div class="bg-white rounded-lg w-full max-w-2xl max-h-[80vh] overflow-y-auto shadow-2xl border-t-4 border-brand-accent">
+    <div id="modal-data"
+        class="fixed inset-0 z-[60] flex items-center justify-center bg-brand-dark/90 backdrop-blur-sm hidden-modal modal p-4">
+        <div
+            class="bg-white rounded-lg w-full max-w-2xl max-h-[80vh] overflow-y-auto shadow-2xl border-t-4 border-brand-accent">
             <div class="sticky top-0 bg-white border-b border-gray-100 p-6 flex justify-between items-center">
                 <h3 class="text-xl font-bold text-brand-dark">Tratamiento de Datos</h3>
-                <button onclick="closeModal('modal-data')" class="text-gray-400 hover:text-brand-dark text-2xl"><i class="fas fa-times"></i></button>
+                <button onclick="closeModal('modal-data')" class="text-gray-400 hover:text-brand-dark text-2xl"><i
+                        class="fas fa-times"></i></button>
             </div>
             <div class="p-6 text-sm text-gray-600 space-y-4">
                 <p><strong>Responsable:</strong> Sorteos WhatsApp (Contacto: soporte@dinamicaslyd.com).</p>
-                <p><strong>Finalidad:</strong> Administrar la participación en sorteos, enviar notificaciones de ganadores, mejorar servicios y comunicaciones promocionales.</p>
-                <p><strong>Base legal:</strong> Consentimiento del usuario, ejecución de contrato (participación) e interés legítimo.</p>
-                <p><strong>Conservación:</strong> Los datos se mantienen solo el tiempo necesario para los fines descritos.</p>
-                <p><strong>Transferencias internacionales:</strong> Pueden realizarse cumpliendo normativas y medidas de seguridad adecuadas.</p>
-                <p><strong>Seguridad y derechos:</strong> Se aplican estrictas medidas de seguridad. Se garantizan derechos de acceso, rectificación, supresión y oposición.</p>
+                <p><strong>Finalidad:</strong> Administrar la participación en sorteos, enviar notificaciones de
+                    ganadores, mejorar servicios y comunicaciones promocionales.</p>
+                <p><strong>Base legal:</strong> Consentimiento del usuario, ejecución de contrato (participación) e
+                    interés legítimo.</p>
+                <p><strong>Conservación:</strong> Los datos se mantienen solo el tiempo necesario para los fines
+                    descritos.</p>
+                <p><strong>Transferencias internacionales:</strong> Pueden realizarse cumpliendo normativas y medidas de
+                    seguridad adecuadas.</p>
+                <p><strong>Seguridad y derechos:</strong> Se aplican estrictas medidas de seguridad. Se garantizan
+                    derechos de acceso, rectificación, supresión y oposición.</p>
                 <p><em>Última actualización: 5 de mayo de 2025.</em></p>
             </div>
-             <div class="p-6 border-t border-gray-100 text-right">
-                <button onclick="closeModal('modal-data')" class="bg-brand-dark text-white px-6 py-2 rounded hover:bg-brand-primary font-medium transition-colors">Entendido</button>
+            <div class="p-6 border-t border-gray-100 text-right">
+                <button onclick="closeModal('modal-data')"
+                    class="bg-brand-dark text-white px-6 py-2 rounded hover:bg-brand-primary font-medium transition-colors">Entendido</button>
             </div>
         </div>
     </div>
@@ -469,7 +608,7 @@
         function toggleFaq(id) {
             const content = document.getElementById(id);
             const icon = document.getElementById('icon-' + id);
-            
+
             if (content.classList.contains('hidden')) {
                 content.classList.remove('hidden');
                 icon.classList.remove('fa-chevron-down');
@@ -506,4 +645,5 @@
         });
     </script>
 </body>
+
 </html>
