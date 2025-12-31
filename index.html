@@ -178,13 +178,15 @@
     </a>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center relative pt-20">
+    <section id="inicio"
+        class="bg-gradient-to-r from-[#0F2C59] to-[#163E75] min-h-screen flex items-center justify-center relative pt-20">
         <div class="relative max-w-7xl mx-auto px-6 z-10 w-full">
             <!-- Layout: Móvil = imagen arriba, texto abajo | Desktop = texto izq, imagen der -->
             <div class="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12">
 
                 <!-- Bloque de TEXTO (orden 2 en móvil, orden 1 en desktop) -->
-                <div class="w-full lg:w-1/2 text-center lg:text-left text-white order-2 lg:order-1">
+                <div
+                    class="w-full lg:w-1/2 text-center lg:text-left text-white order-2 lg:order-1 flex flex-col justify-center">
                     <h2 class="text-xs md:text-base font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-3 md:mb-4 text-brand-accent fade-in-up"
                         style="animation-delay: 0.1s;">Participá, Ganá y Celebrá</h2>
                     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 md:mb-6 leading-tight fade-in-up drop-shadow-xl"
@@ -216,11 +218,11 @@
                 <div class="w-full lg:w-1/2 relative order-1 lg:order-2 fade-in-up" style="animation-delay: 0.2s;">
                     <!-- Imagen Desktop (oculta en móvil) -->
                     <img src="foto des.webp" alt="Ganadora señalando"
-                        class="hidden lg:block w-full h-auto max-w-md mx-auto rounded-2xl shadow-2xl">
+                        class="hidden lg:block w-full h-auto object-contain">
 
                     <!-- Imagen Móvil (visible en móvil, oculta en desktop) -->
                     <img src="foto movil.webp" alt="Ganadora feliz"
-                        class="block lg:hidden w-full h-auto max-w-sm mx-auto rounded-2xl shadow-2xl">
+                        class="block lg:hidden w-full h-auto object-contain mx-auto">
 
                     <!-- Texto superpuesto sobre la foto -->
                     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center w-full px-4">
