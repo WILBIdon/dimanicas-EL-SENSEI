@@ -103,6 +103,12 @@
             visibility: visible;
             pointer-events: auto;
         }
+
+        /* Parallax Effect */
+        .parallax-img {
+            transition: transform 0.1s ease-out;
+            will-change: transform;
+        }
     </style>
 </head>
 
@@ -217,12 +223,12 @@
                 <!-- Bloque de IMAGEN (orden 1 en móvil, orden 2 en desktop) -->
                 <div class="w-full lg:w-1/2 relative order-1 lg:order-2 fade-in-up" style="animation-delay: 0.2s;">
                     <!-- Imagen Desktop (oculta en móvil) -->
-                    <img src="foto des.webp" alt="Ganadora señalando"
-                        class="hidden lg:block w-full h-auto object-contain">
+                    <img src="foto des.webp" alt="Ganadora señalando" id="parallax-desktop"
+                        class="hidden lg:block w-full h-auto object-contain parallax-img">
 
                     <!-- Imagen Móvil (visible en móvil, oculta en desktop) -->
-                    <img src="foto movil.webp" alt="Ganadora feliz"
-                        class="block lg:hidden w-full h-auto object-contain mx-auto">
+                    <img src="foto movil.webp" alt="Ganadora feliz" id="parallax-mobile"
+                        class="block lg:hidden w-full h-auto object-contain mx-auto parallax-img">
 
                     <!-- Texto superpuesto sobre la foto -->
                     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center w-full px-4">
@@ -709,6 +715,25 @@
                     closeModal(modal.id);
                 }
             });
+        });
+
+        // Parallax Effect for Hero Images
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const parallaxDesktop = document.getElementById('parallax-desktop');
+            const parallaxMobile = document.getElementById('parallax-mobile');
+
+            // Apply parallax only when in hero section (first 100vh)
+            if (scrollY < window.innerHeight) {
+                const parallaxValue = scrollY * 0.3; // Ajusta la velocidad del parallax
+
+                if (parallaxDesktop) {
+                    parallaxDesktop.style.transform = `translateY(${parallaxValue}px)`;
+                }
+                if (parallaxMobile) {
+                    parallaxMobile.style.transform = `translateY(${parallaxValue}px)`;
+                }
+            }
         });
     </script>
 </body>
