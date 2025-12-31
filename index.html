@@ -170,32 +170,70 @@
         </div>
     </nav>
 
+    <!-- Botón Flotante WhatsApp - Arriba Izquierda -->
+    <a href="https://chat.whatsapp.com/LlV1ej9rQEB8PNWfgOfZfO" target="_blank"
+        class="fixed top-28 left-4 z-50 bg-brand-whatsapp hover:bg-brand-whatsappDark text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all"
+        style="animation: pulse 2s infinite;">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
     <!-- Hero Section -->
     <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center relative pt-20">
-        <div class="relative max-w-7xl mx-auto px-6 text-center text-white z-10">
-            <h2 class="text-xs md:text-base font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-3 md:mb-4 text-brand-accent fade-in-up"
-                style="animation-delay: 0.1s;">Participá, Ganá y Celebrá</h2>
-            <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 md:mb-6 leading-tight fade-in-up drop-shadow-xl"
-                style="animation-delay: 0.3s;">
-                Premios Reales<br><span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-yellow-100 to-brand-accent">Todos
-                    los Días</span>
-            </h1>
-            <p class="text-base md:text-lg lg:text-xl text-blue-100 mb-8 md:mb-10 max-w-2xl mx-auto font-light fade-in-up px-4 md:px-0"
-                style="animation-delay: 0.5s;">
-                Únete a nuestra comunidad exclusiva. Tecnología, efectivo y experiencias de lujo a solo un clic de
-                distancia.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-3 md:gap-5 justify-center fade-in-up px-4 md:px-0"
-                style="animation-delay: 0.7s;">
-                <a href="https://chat.whatsapp.com/LlV1ej9rQEB8PNWfgOfZfO" target="_blank"
-                    class="px-6 md:px-8 py-3 md:py-4 bg-brand-whatsapp text-white text-sm md:text-base font-bold rounded-lg hover:bg-brand-whatsappDark transition-colors duration-300 shadow-xl flex items-center justify-center gap-2 border border-transparent hover:border-white/30 transform hover:scale-105">
-                    <i class="fab fa-whatsapp text-lg md:text-xl"></i> UNIRSE AHORA
-                </a>
-                <a href="#como-funciona"
-                    class="px-6 md:px-8 py-3 md:py-4 border border-brand-accent text-brand-accent text-sm md:text-base font-semibold rounded-lg hover:bg-brand-accent hover:text-brand-dark transition-colors duration-300">
-                    Ver Dinámica
-                </a>
+        <div class="relative max-w-7xl mx-auto px-6 z-10 w-full">
+            <!-- Layout: Móvil = imagen arriba, texto abajo | Desktop = texto izq, imagen der -->
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12">
+
+                <!-- Bloque de TEXTO (orden 2 en móvil, orden 1 en desktop) -->
+                <div class="w-full lg:w-1/2 text-center lg:text-left text-white order-2 lg:order-1">
+                    <h2 class="text-xs md:text-base font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-3 md:mb-4 text-brand-accent fade-in-up"
+                        style="animation-delay: 0.1s;">Participá, Ganá y Celebrá</h2>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 md:mb-6 leading-tight fade-in-up drop-shadow-xl"
+                        style="animation-delay: 0.3s;">
+                        Premios Reales<br><span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-yellow-100 to-brand-accent">Todos
+                            los Días</span>
+                    </h1>
+                    <p class="text-base md:text-lg lg:text-xl text-blue-100 mb-8 md:mb-10 max-w-2xl mx-auto lg:mx-0 font-light fade-in-up"
+                        style="animation-delay: 0.5s;">
+                        Únete a nuestra comunidad exclusiva. Tecnología, efectivo y experiencias de lujo a solo un clic
+                        de
+                        distancia.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 md:gap-5 justify-center lg:justify-start fade-in-up"
+                        style="animation-delay: 0.7s;">
+                        <a href="https://chat.whatsapp.com/LlV1ej9rQEB8PNWfgOfZfO" target="_blank"
+                            class="px-6 md:px-8 py-3 md:py-4 bg-brand-whatsapp text-white text-sm md:text-base font-bold rounded-lg hover:bg-brand-whatsappDark transition-colors duration-300 shadow-xl flex items-center justify-center gap-2 border border-transparent hover:border-white/30 transform hover:scale-105">
+                            <i class="fab fa-whatsapp text-lg md:text-xl"></i> UNIRSE AHORA
+                        </a>
+                        <a href="#como-funciona"
+                            class="px-6 md:px-8 py-3 md:py-4 border border-brand-accent text-brand-accent text-sm md:text-base font-semibold rounded-lg hover:bg-brand-accent hover:text-brand-dark transition-colors duration-300">
+                            Ver Dinámica
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bloque de IMAGEN (orden 1 en móvil, orden 2 en desktop) -->
+                <div class="w-full lg:w-1/2 relative order-1 lg:order-2 fade-in-up" style="animation-delay: 0.2s;">
+                    <!-- Imagen Desktop (oculta en móvil) -->
+                    <img src="foto des.webp" alt="Ganadora señalando"
+                        class="hidden lg:block w-full h-auto max-w-md mx-auto rounded-2xl shadow-2xl">
+
+                    <!-- Imagen Móvil (visible en móvil, oculta en desktop) -->
+                    <img src="foto movil.webp" alt="Ganadora feliz"
+                        class="block lg:hidden w-full h-auto max-w-sm mx-auto rounded-2xl shadow-2xl">
+
+                    <!-- Texto superpuesto sobre la foto -->
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center w-full px-4">
+                        <p class="text-white text-sm md:text-base font-light mb-2 drop-shadow-lg"
+                            style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">
+                            Sorteos todos los días...
+                        </p>
+                        <span
+                            class="inline-block bg-gradient-to-r from-brand-accent to-yellow-400 text-brand-dark font-bold text-sm md:text-lg px-4 py-2 rounded-full shadow-lg animate-pulse">
+                            💰 GANA FÁCIL HASTA 2 MILLONES
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
 
